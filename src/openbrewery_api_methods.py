@@ -1,8 +1,6 @@
 import requests
 
 
-'https://api.openbrewerydb.org/breweries/'
-
 class OpenBreweryMethods:
 
     def __init__(self, base_url):
