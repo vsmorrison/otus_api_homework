@@ -9,8 +9,12 @@ def test_get_random_image(get_random_image):
     assert get_random_image.status_code == 200
 
 
-@pytest.mark.parametrize('get_all_pictures_by_breed', ['boxer'])
-def test_get_all_pictures_by_breed(get_all_pictures_by_breed):
-    print(get_all_pictures_by_breed)
-    assert get_all_pictures_by_breed.status_code == 200
+@pytest.mark.parametrize('set_breed', ['boxer'], indirect=True)
+def test_get_images_by_breed(get_images_by_breed):
+    assert get_images_by_breed.status_code == 200
 
+
+@pytest.mark.parametrize('set_sub_breed', ['boston'], indirect=True)
+@pytest.mark.parametrize('set_breed', ['bulldog'], indirect=True)
+def test_get_images_by_sub_breed(get_images_by_sub_breed):
+    assert get_images_by_sub_breed.status_code == 200
