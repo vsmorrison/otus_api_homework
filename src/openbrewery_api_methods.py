@@ -14,18 +14,19 @@ class OpenBreweryMethods:
 
     def get_list_of_breweries(self, payload=None):
         url = f'{self.base_url}'
-        response = requests.get(url, payload)
+        response = requests.get(url, params=payload)
         response.raise_for_status()
         return response
 
     def search_breweries(self, payload=None):
         url = f'{self.base_url}/search'
-        response = requests.get(url, payload)
+        response = requests.get(url, params=payload)
         response.raise_for_status()
         return response
 
     def search_breweries_w_autocomplete(self, payload=None):
         url = f'{self.base_url}/autocomplete'
-        response = requests.get(url, payload)
+        response = requests.get(url, params=payload)
         response.raise_for_status()
         return response
+gi
