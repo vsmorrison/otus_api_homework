@@ -9,7 +9,7 @@ def set_base_urls():
     urls = {
         'dog_ceo_url': 'https://dog.ceo/api',
         'openbrewery_url': 'https://api.openbrewerydb.org/breweries',
-        'jsonplaceholder_url': 'https://jsonplaceholder.typicode.com'
+        'jsonplaceholder_url': 'https://jsonplaceholder.typicode.com/posts'
     }
     return urls
 
